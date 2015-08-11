@@ -1,13 +1,19 @@
 {
   "name": "subl-open",
   "description": "",
-  "repository": "https://github.com/parroit/subl-open.git",
+  "repository": "https://github.com/parro-it/subl-open.git",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "dependencies": {
-    "babel-runtime": "^5.8.20"
+  "bin": {
+    "subl-open":"dist/index.js"
   },
-  "author": "parroit",
+  "license": "MIT",
+  "dependencies": {
+    "babel-runtime": "^5.8.20",
+    "simple-auth": "0.0.1",
+    "yargs": "^3.18.0"
+  },
+  "author": "parro-it",
   "scripts": {
     "test": "mocha test/*_test.js test/**/*_test.js --require ./test/_init || echo failed",
     "test-release": "export TEST_RELEASE=1 && mocha dist_test/*_test.js dist_test/**/*_test.js --require ./dist_test/_init-release",
